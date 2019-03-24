@@ -1,7 +1,6 @@
 // @flow
 import React, { Component, type Node } from 'react';
 import { css } from 'emotion';
-
 import { CrossIcon } from './indicators';
 import type { CommonProps } from '../types';
 
@@ -70,7 +69,7 @@ export const MultiValueGeneric = ({
 
 export const MultiValueContainer = MultiValueGeneric;
 export const MultiValueLabel = MultiValueGeneric;
-export type MultiValueRemoveProps = CommonProps & {
+export type MultiValueRemoveProps = {
   children: Node,
   data: any,
   innerProps: {
@@ -82,12 +81,9 @@ export type MultiValueRemoveProps = CommonProps & {
   selectProps: any,
 };
 export class MultiValueRemove extends Component<MultiValueRemoveProps> {
-  static defaultProps = {
-    children: <CrossIcon size={14} />,
-  };
   render() {
     const { children, innerProps } = this.props;
-    return <div {...innerProps}>{children}</div>;
+    return <div {...innerProps}>{children || <CrossIcon size={14} />}</div>;
   }
 }
 

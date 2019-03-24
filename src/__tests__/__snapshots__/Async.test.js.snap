@@ -4,6 +4,7 @@ exports[`defaults - snapshot 1`] = `
 <Async
   cacheOptions={false}
   defaultOptions={false}
+  filterOption={null}
 >
   <StateManager
     cacheOptions={false}
@@ -25,10 +26,7 @@ exports[`defaults - snapshot 1`] = `
       closeMenuOnSelect={true}
       components={Object {}}
       controlShouldRenderValue={true}
-      defaultInputValue=""
-      defaultMenuIsOpen={false}
       defaultOptions={false}
-      defaultValue={null}
       escapeClearsValue={false}
       filterOption={null}
       formatGroupLabel={[Function]}
@@ -93,10 +91,7 @@ exports[`defaults - snapshot 1`] = `
             "closeMenuOnSelect": true,
             "components": Object {},
             "controlShouldRenderValue": true,
-            "defaultInputValue": "",
-            "defaultMenuIsOpen": false,
             "defaultOptions": false,
-            "defaultValue": null,
             "escapeClearsValue": false,
             "filterOption": null,
             "formatGroupLabel": [Function],
@@ -186,6 +181,7 @@ exports[`defaults - snapshot 1`] = `
             isFocused={false}
             isMulti={false}
             isRtl={false}
+            menuIsOpen={false}
             options={Array []}
             selectOption={[Function]}
             selectProps={
@@ -198,10 +194,7 @@ exports[`defaults - snapshot 1`] = `
                 "closeMenuOnSelect": true,
                 "components": Object {},
                 "controlShouldRenderValue": true,
-                "defaultInputValue": "",
-                "defaultMenuIsOpen": false,
                 "defaultOptions": false,
-                "defaultValue": null,
                 "escapeClearsValue": false,
                 "filterOption": null,
                 "formatGroupLabel": [Function],
@@ -296,10 +289,7 @@ exports[`defaults - snapshot 1`] = `
                     "closeMenuOnSelect": true,
                     "components": Object {},
                     "controlShouldRenderValue": true,
-                    "defaultInputValue": "",
-                    "defaultMenuIsOpen": false,
                     "defaultOptions": false,
-                    "defaultValue": null,
                     "escapeClearsValue": false,
                     "filterOption": null,
                     "formatGroupLabel": [Function],
@@ -394,10 +384,7 @@ exports[`defaults - snapshot 1`] = `
                         "closeMenuOnSelect": true,
                         "components": Object {},
                         "controlShouldRenderValue": true,
-                        "defaultInputValue": "",
-                        "defaultMenuIsOpen": false,
                         "defaultOptions": false,
-                        "defaultValue": null,
                         "escapeClearsValue": false,
                         "filterOption": null,
                         "formatGroupLabel": [Function],
@@ -486,6 +473,54 @@ exports[`defaults - snapshot 1`] = `
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    selectProps={
+                      Object {
+                        "backspaceRemovesValue": true,
+                        "blurInputOnSelect": true,
+                        "cacheOptions": false,
+                        "captureMenuScroll": false,
+                        "closeMenuOnScroll": false,
+                        "closeMenuOnSelect": true,
+                        "components": Object {},
+                        "controlShouldRenderValue": true,
+                        "defaultOptions": false,
+                        "escapeClearsValue": false,
+                        "filterOption": null,
+                        "formatGroupLabel": [Function],
+                        "getOptionLabel": [Function],
+                        "getOptionValue": [Function],
+                        "inputValue": "",
+                        "isDisabled": false,
+                        "isLoading": false,
+                        "isMulti": false,
+                        "isOptionDisabled": [Function],
+                        "isRtl": false,
+                        "isSearchable": true,
+                        "loadingMessage": [Function],
+                        "maxMenuHeight": 300,
+                        "menuIsOpen": false,
+                        "menuPlacement": "bottom",
+                        "menuPosition": "absolute",
+                        "menuShouldBlockScroll": false,
+                        "menuShouldScrollIntoView": true,
+                        "minMenuHeight": 140,
+                        "noOptionsMessage": [Function],
+                        "onChange": [Function],
+                        "onInputChange": [Function],
+                        "onMenuClose": [Function],
+                        "onMenuOpen": [Function],
+                        "openMenuOnClick": true,
+                        "openMenuOnFocus": false,
+                        "options": Array [],
+                        "pageSize": 5,
+                        "placeholder": "Select...",
+                        "screenReaderStatus": [Function],
+                        "styles": Object {},
+                        "tabIndex": "0",
+                        "tabSelectsValue": true,
+                        "value": null,
+                      }
+                    }
                     spellCheck="false"
                     tabIndex="0"
                     theme={
@@ -629,10 +664,7 @@ exports[`defaults - snapshot 1`] = `
                     "closeMenuOnSelect": true,
                     "components": Object {},
                     "controlShouldRenderValue": true,
-                    "defaultInputValue": "",
-                    "defaultMenuIsOpen": false,
                     "defaultOptions": false,
-                    "defaultValue": null,
                     "escapeClearsValue": false,
                     "filterOption": null,
                     "formatGroupLabel": [Function],
@@ -726,10 +758,7 @@ exports[`defaults - snapshot 1`] = `
                         "closeMenuOnSelect": true,
                         "components": Object {},
                         "controlShouldRenderValue": true,
-                        "defaultInputValue": "",
-                        "defaultMenuIsOpen": false,
                         "defaultOptions": false,
-                        "defaultValue": null,
                         "escapeClearsValue": false,
                         "filterOption": null,
                         "formatGroupLabel": [Function],
@@ -831,10 +860,7 @@ exports[`defaults - snapshot 1`] = `
                         "closeMenuOnSelect": true,
                         "components": Object {},
                         "controlShouldRenderValue": true,
-                        "defaultInputValue": "",
-                        "defaultMenuIsOpen": false,
                         "defaultOptions": false,
-                        "defaultValue": null,
                         "escapeClearsValue": false,
                         "filterOption": null,
                         "formatGroupLabel": [Function],

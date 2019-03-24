@@ -1,9 +1,8 @@
 // @flow
 import React, { type Node } from 'react';
-import { injectGlobal, css } from 'emotion';
+import { css, injectGlobal } from 'emotion';
 
-import { type CommonProps } from '../types';
-import type { Theme } from '../types';
+import type { CommonProps, Theme } from '../types';
 
 // ==============================
 // Dropdown & Clear Icons
@@ -26,6 +25,7 @@ const Svg = ({ size, ...props }: { size: number }) => (
     {...props}
   />
 );
+
 
 export const CrossIcon = (props: any) => (
   <Svg size={20} {...props}>
@@ -82,14 +82,10 @@ export const DropdownIndicator = (props: IndicatorProps) => {
         className,
       )}
     >
-      {children}
+      {children || <DownChevron />}
     </div>
   );
 };
-DropdownIndicator.defaultProps = {
-  children: <DownChevron />,
-};
-
 
 export const clearIndicatorCSS = baseCSS;
 export const ClearIndicator = (props: IndicatorProps) => {
@@ -105,13 +101,9 @@ export const ClearIndicator = (props: IndicatorProps) => {
         },
         className)}
     >
-      {children}
+      {children || <CrossIcon />}
     </div>
   );
-};
-
-ClearIndicator.defaultProps = {
-  children: <CrossIcon />
 };
 
 // ==============================
@@ -150,6 +142,7 @@ export const IndicatorSeparator = (props: IndicatorProps) => {
 // ==============================
 
 const keyframesName = 'react-select-loading-indicator';
+let keyframesInjected = false;
 
 export const loadingIndicatorCSS = ({
   isFocused,
@@ -175,7 +168,7 @@ export const loadingIndicatorCSS = ({
 type DotProps = { color: string, delay: number, offset: boolean };
 const LoadingDot = ({ color, delay, offset }: DotProps) => (
   <span
-    css={{
+    className={css({
       animationDuration: '1s',
       animationDelay: `${delay}ms`,
       animationIterationCount: 'infinite',
@@ -188,15 +181,9 @@ const LoadingDot = ({ color, delay, offset }: DotProps) => (
       height: '1em',
       verticalAlign: 'top',
       width: '1em',
-    }}
+    })}
   />
 );
-
-// eslint-disable-next-line no-unused-expressions
-injectGlobal`@keyframes ${keyframesName} {
-  0%, 80%, 100% { opacity: 0; }
-  40% { opacity: 1; }
-};`;
 
 export type LoadingIconProps = {
   /** Props that will be passed on to the children. */
@@ -212,6 +199,15 @@ export type LoadingIconProps = {
 export const LoadingIndicator = (props: LoadingIconProps) => {
   const { className, cx, getStyles, innerProps, isFocused, isRtl, theme: { colors } } = props;
   const color = isFocused ? colors.neutral80 : colors.neutral20;
+
+  if(!keyframesInjected) {
+    // eslint-disable-next-line no-unused-expressions
+    injectGlobal`@keyframes ${keyframesName} {
+      0%, 80%, 100% { opacity: 0; }
+      40% { opacity: 1; }
+    };`;
+    keyframesInjected = true;
+  }
 
   return (
     <div

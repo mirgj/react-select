@@ -1,7 +1,6 @@
 // @flow
 import React, { type Node } from 'react';
 import { css } from 'emotion';
-
 import type { CommonProps, PropsWithStyles, InnerRef } from '../types';
 
 type State = {
